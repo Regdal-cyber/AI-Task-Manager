@@ -33,6 +33,22 @@ h2 {
   border-radius: 12px;
 }
 
+.description-block span {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #6b7280;
+}
+
+.task-description {
+  background: #eaebe1;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 0 0 18px;
+  color: #4b5563;
+}
+
 .task-form input,
 .task-form textarea {
   width: 100%;
@@ -104,7 +120,7 @@ h2 {
   border: 1px solid rgb(99, 64, 64);
   border-radius: 6px;
   font-size: 14px;
-  background: rgb(99, 64, 64);
+  background: rgb(201, 199, 188);
   cursor: pointer;
 }
 
@@ -119,5 +135,61 @@ h2 {
 }
 
 .task button:hover {
+  background: #dc2626;
+}
+
+.status {
+  font-weight: bold;
+}
+
+.status-new {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.status-in_progress {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.status-done {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.error {
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 12px 15px;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.loading {
+  text-align: center;
+  color: #6b7280;
+  font-size: 18px;
+}
+
+.empty {
+  background: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 12px;
+  color: #6b7280;
+}
+
+.delete-button {
+  margin-left: 10px;
+  padding: 9px 14px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
   background: #dc2626;
 }

@@ -9,8 +9,7 @@ app.use(express.json());
 app.use('/tasks', tasksRouter);
 
 const port = 3000;
-console.log('DB_USER:', process.env.DB_USER);
-console.log('DB_PASSWORD:', process.env.DB_PASSWORD);
+
 app.listen(port, () => {
     console.log('Сервер запущен!')
 });
