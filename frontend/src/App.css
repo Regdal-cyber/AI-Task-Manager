@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #383c44;
+  color: #1f2937;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 36px;
+}
+
+h2 {
+  margin: 30px 0 20px;
+}
+
+/* Форма */
+
+.task-form {
+  background: rgb(133, 130, 121);
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.task-form input,
+.task-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  font-size: 16px;
+  font-family: inherit;
+  background: white;
+  color: #1f2937;
+}
+
+.task-form input:focus,
+.task-form textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+.task-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.task-form button {
+  display: block;
+  margin: 5px auto 0;
+  padding: 11px 22px;
+  background: #d8340b;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.task-form button:hover {
+  background: #c50808;
+}
+
+/* Задачи */
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.task {
+  background: rgb(201, 193, 193);
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+.task h3 {
+  margin: 0 0 10px;
+  font-size: 21px;
+}
+
+.task p {
+  margin: 0 0 18px;
+  color: #19192c;
+  line-height: 1.5;
+}
+
+.task select {
+  padding: 9px 12px;
+  border: 1px solid rgb(99, 64, 64);
+  border-radius: 6px;
+  font-size: 14px;
+  background: rgb(99, 64, 64);
+  cursor: pointer;
+}
+
+.task button {
+  margin-left: 10px;
+  padding: 9px 14px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.task button:hover {
+  background: #dc2626;
+}
