@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Regdal-cyber/AI-Task-Manager#readme",
   "dependencies": {
+    "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "pg": "^8.23.0"
   }

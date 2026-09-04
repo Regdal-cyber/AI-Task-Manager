@@ -1,16 +1,7 @@
-const { Pool } = require('pg');
+const pool = require('../db');
 const express = require('express');
-const app = express();
-const pool = new Pool({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'task_manager',
-    password: 'artur1103',
-    port: 5432
-});
-const port = 3000;
-app.use(express.json());
-app.get('/tasks', async (req, res) => {
+const router = express.Router();
+router.get('/', async (req, res) => {
     try {
         const result = await pool.query('SELECT * FROM tasks')
         res.json(result.rows);
@@ -20,7 +11,7 @@ app.get('/tasks', async (req, res) => {
         });
     }
 });
-app.post('/tasks', async (req, res) => {
+router.post('/', async (req, res) => {
     try {
         const title = req.body.title;
         const description = req.body.description;
@@ -35,7 +26,7 @@ app.post('/tasks', async (req, res) => {
         });
     }
 })
-app.put('/tasks/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
     try {
         const id = req.params.id;
         const status = req.body.status;
@@ -50,7 +41,7 @@ app.put('/tasks/:id', async (req, res) => {
         });
     }
 })
-app.delete('/tasks/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
     try {
         const id = req.params.id;
         const result = await pool.query(
@@ -67,6 +58,4 @@ app.delete('/tasks/:id', async (req, res) => {
         });
     }
 })
-app.listen(port, () => {
-    console.log('Сервер запущен!')
-});
+module.exports = router;
