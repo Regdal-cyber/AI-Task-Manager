@@ -19,6 +19,9 @@
 ###  scripts/
     `export_tasks.py` Python-скрипт. Подключается к PostgreSQL, загружает все задачи и сохраняет в CSV-файл.
 
+### node_modules/
+    Библиотека
+
 ## Как запустить проект
 
 ### 1. База данных (PostgreSQL)
@@ -115,5 +118,6 @@ DELETE  /tasks/:id	Удалить задачу
     AI-Task-Manager/
     ├── backend/
     ├── frontend/
+    ├── node_modules/
     ├── scripts/
     └── README.md
